@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 	var items = movies;
 	console.log(items);
@@ -8,7 +6,7 @@ $(document).ready(function(){
 	showList (0,itemsNumber);
 	
 	//button "Show more"
-	var next = $(`<div class="row p-2"><button id="next" class="b-like btn btn-primary mx-auto">Show more</button></div>`)
+	var next = $(`<div class="row p-2"><button id="next" class="btn btn-primary mx-auto" type="button">Show more</button></div>`)
 	$("#content").append(next);
 	next.click(function(){		
 		if (itemsNumber >= items.length) {
@@ -77,7 +75,7 @@ $(document).ready(function(){
 								<div class="card-body">
 									<h4 class="card-title">${items[i].name}<span class="small"> [${items[i].year}]</span></h4>
 									<p class="card-text">${items[i].description}</p>
-									<div class="row"><button id="b-${items[i].iD}" class="b-like btn btn-primary">Like</button>
+									<div class="row"><button id="b-${items[i].iD}" class="btn btn-primary">Like</button>
 									<div class="w-75"><h4 class="text-warning font-weight-bold text-right"></h4></span></div>
 								</div>
 							</div>
@@ -103,7 +101,6 @@ $(document).ready(function(){
 						$(this).next().children().append(` &#9733;`);
 					}
 				} else {$(this).next().children().append(`${items[i].likes}&#9733;`);}
-				//$(this).next().append(` ${items[i].likes}&#9733;`);
 			});
 			//end of the "like" function
 		}
@@ -111,24 +108,53 @@ $(document).ready(function(){
 	
 	// sort button
 	$("#sort").click(function(){
-	//sort function
-		for (var i = 0; i < items.length; i++) {
-			var max = i;
-			
-			var piv = items[i];
-			
-			for (var j = i; j < items.length; j++) {
-				if (items[j].likes > items[max].likes) {max = j;}
-			}
-			items[i] = items[max];
-			items[max] = piv;						
+		var pr = $("#props").val();
+		console.log(pr);
+		switch(pr) {
+			case "likeMin":
+				sortBy(items,"likes",true);
+				break;
+			case "likeMax":
+				sortBy(items,"likes",false);
+				break;
+			case "yearMin":
+				sortBy(items,"year",true);
+				break;
+			case "yearMax":
+				sortBy(items,"year",false);
+				break;
 		}
 		$("#list").empty();
 		showList(0,itemsNumber);
-	//end of sort func
 	});
 
 	
 
 //do not delete line after these comment
 });
+
+//sort function
+function sortBy (obj,prop,minToMax) {
+	if (minToMax) {
+		for (var i = 0; i < obj.length; i++) {
+			var min = i;
+			var piv = obj[i];
+			for (var j = i; j < obj.length; j++) {
+				if (obj[j][prop] < obj[min][prop]) {min = j;}
+			}
+			obj[i] = obj[min];
+			obj[min] = piv;
+		}
+	} else {
+		for (var i = 0; i < obj.length; i++) {
+			var max = i;
+			var piv = obj[i];
+			for (var j = i; j < obj.length; j++) {
+				if (obj[j][prop] > obj[max][prop]) {max = j;}
+			}
+			obj[i] = obj[max];
+			obj[max] = piv;
+		}
+	}
+	
+}

@@ -1,7 +1,7 @@
 var movies = [
 	{"iD":"m001",
 	"name":"Movie name",
-	"year":"19--",
+	"year":"1999",
 	"description":"small description",
 	"genre":"action",
 	"statusWatch":"false",
@@ -10,7 +10,7 @@ var movies = [
 
 	{"iD":"m002",
 	"name":"Movie name",
-	"year":"19--",
+	"year":"1994",
 	"description":"small description",
 	"genre":"drama",
 	"statusWatch":"false",
@@ -19,7 +19,7 @@ var movies = [
 
 	{"iD":"m003",
 	"name":"Movie name",
-	"year":"19--",
+	"year":"1977",
 	"description":"small description",
 	"genre":"action",
 	"statusWatch":"false",
@@ -28,7 +28,7 @@ var movies = [
 
 	{"iD":"m004",
 	"name":"Movie name",
-	"year":"19--",
+	"year":"2018",
 	"description":"small description",
 	"genre":"action",
 	"statusWatch":"false",
@@ -37,7 +37,7 @@ var movies = [
 
 	{"iD":"m005",
 	"name":"Movie name",
-	"year":"19--",
+	"year":"1994",
 	"description":"small description",
 	"genre":"drama",
 	"statusWatch":"false",
@@ -46,7 +46,7 @@ var movies = [
 
 	{"iD":"m006",
 	"name":"Movie name",
-	"year":"19--",
+	"year":"2019",
 	"description":"small description",
 	"genre":"comedy",
 	"statusWatch":"false",
@@ -55,7 +55,7 @@ var movies = [
 
 	{"iD":"m007",
 	"name":"Movie name",
-	"year":"19--",
+	"year":"2014",
 	"description":"small description",
 	"genre":"adventure",
 	"statusWatch":"false",
@@ -64,7 +64,7 @@ var movies = [
 
 	{"iD":"m008",
 	"name":"Movie name",
-	"year":"19--",
+	"year":"1900",
 	"description":"small description",
 	"genre":"comedy",
 	"statusWatch":"false",
@@ -73,7 +73,7 @@ var movies = [
 
 	{"iD":"m009",
 	"name":"Movie name",
-	"year":"19--",
+	"year":"2010",
 	"description":"small description",
 	"genre":"action",
 	"statusWatch":"false",
@@ -82,7 +82,7 @@ var movies = [
 
 	{"iD":"m010",
 	"name":"Movie name",
-	"year":"19--",
+	"year":"1988",
 	"description":"small description",
 	"genre":"action",
 	"statusWatch":"false",

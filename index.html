@@ -28,15 +28,21 @@
     				<a class="nav-link disabled" href="#">Forum</a>
     			</li>
     		</ul>
+    		<form class="form-inline ml-auto">
+    			<label class="text-white mr-3" for="props">Sort movies</label>
+    			<select id="props" name="prop" class="custom-select mr-sm-2">
+    				<option value="likeMin">by likes ascending</option>
+    				<option value="likeMax">by likes descending</option>
+    				<option value="yearMin">by year ascending</option>
+    				<option value="yearMax">by year descending</option>
+    			</select>
+    			<button id="sort" class="btn btn-dark" type="button">Sort</button>
+    		</form>
     	</nav>
 
 		<div id="content" class="container-fluid bg-secondary">
 			<div class="row m-0 p-4">
-				<div class="col-md-4"></div>
-				<div class="col-md-4 text-center"><h3>Movies</h3></div>
-				<div class="col-md-4 text-right">
-					<button id="sort" class="btn btn-dark ml-auto">Sort</button>
-				</div>
+				<div class="w-100 text-center"><h3>Movies</h3></div>
 			</div>
 			<div class="row m-0 p-2">
 				<h4>Watch it, like it, be cool...</h4>
